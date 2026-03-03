@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="app__header">
+            <h1 class="app__title">Rock Paper Scissor</h1>
+            <p class="app__subtitle">Pick a move. First to bragging rights.</p>
+        </header>
+
+        <main class="card">
+            <section class="choices-grid" aria-label="Choices">
+                <!-- Keep ids for existing JS -->
+                <button class="choice choices" id="rock" type="button" aria-label="Rock">
+                    <span class="choice__icon" aria-hidden="true">✊</span>
+                    <span class="choice__label">Rock</span>
+                </button>
+                <button class="choice choices" id="paper" type="button" aria-label="Paper">
+                    <span class="choice__icon" aria-hidden="true">✋</span>
+                    <span class="choice__label">Paper</span>
+                </button>
+                <button class="choice choices" id="scissor" type="button" aria-label="Scissor">
+                    <span class="choice__icon" aria-hidden="true">✌️</span>
+                    <span class="choice__label">Scissor</span>
+                </button>
+            </section>
+
+            <section class="score-board" aria-label="Score board">
+                <div class="score">
+                    <p class="score__value" id="my-score">0</p>
+                    <p class="score__label">You</p>
+                </div>
+                <div class="score__divider" aria-hidden="true"></div>
+                <div class="score">
+                    <p class="score__value" id="comp-score">0</p>
+                    <p class="score__label">Computer</p>
+                </div>
+            </section>
+
+            <section class="message" aria-live="polite">
+                <p id="msg">Play your move</p>
+            </section>
+
+            <div class="controls">
+                <button id="restart-btn" class="primary-button" type="button">Restart game</button>
+            </div>
+        </main>
+
+        <footer class="app__footer">
+            <p class="app__hint">Tip: Try a few rounds—use the restart button any time.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
